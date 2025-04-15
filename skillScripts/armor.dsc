@@ -10,13 +10,13 @@ lightarmor:
             - foreach <[playerGear]> as:item:
                 #- narrate <[item].material.name>
                 - if <[item].material.name> matches netherite_* || <[item].material.name> matches iron_* || <[item].material.name> matches gold_* <[item].material.name> matches diamond_*:
-                    - narrate "asdasdas"
                     - flag player heavyOn
                 - if <[item].material.name> matches leather_* || <[item].material.name> matches chainmail_*:
-                    - narrate "AAA A"
                     - flag player lightOn
             - if <player.has_flag[lightOn]> && <player.has_flag[heavyOn]>:
                 - narrate "You have differing armor classes, no XP gained!"
+            # gives players xp based on the amount of damage they reduced the attack by, light armor has a higher multiplier
+            # due to it reducing damage less
             - if <player.has_flag[lightOn]>:
                 - narrate <[damageDifferential].mul[4]>
                 - define skill <player.flag[skillLightArmor]>
@@ -26,6 +26,7 @@ lightarmor:
                 - define skill <player.flag[skillHeavyArmor]>
                 - run skillChecker def.xp:<[damageDifferential].mul[3]> def.skill:<[skill]> def.skillFlag:skillHeavyArmor
         after player damaged by entity:
+            # displays the appropriate xp bar, can't earn armor xp from taking damaged with mixed armor classes
             - if <player.has_flag[lightOn]> && <player.has_flag[heavyOn]>:
                 - determine passively
             - else if <player.has_flag[lightOn]>:
@@ -42,6 +43,7 @@ lightarmor:
             - define lLevel <player.flag[skillLightArmor].get[1]>
             - define slot <context.slot>
             - define item <context.cursor_item>
+            # this checks dragging armor into an armor slot
             - if <[slot]> in <[armorSlot]>:
                 - if <[item]> matches iron_* && <[hLevel]> < 1:
                     - determine cancelled
@@ -61,6 +63,7 @@ lightarmor:
             - define item <context.item>
             - define hLevel <player.flag[skillHeavyArmor].get[1]>
             - define lLevel <player.flag[skillLightArmor].get[1]>
+            # this checks for shift clicks to equip an item as armor
             - if <[item]> matches <list[*leggings|*helm|*chestplate|*boots|*tunic|*pants|*cap]>:
                 - if <[item]> matches iron_* && <[hLevel]> < 1:
                     - determine cancelled
@@ -80,6 +83,7 @@ lightarmor:
             - define item <context.item>
             - define hLevel <player.flag[skillHeavyArmor].get[1]>
             - define lLevel <player.flag[skillLightArmor].get[1]>
+            # this checks if a player tries to right click with an armor piece in hand to equip it (no idea why that is a thing)
             - if <[item]> matches <list[*leggings|*helm|*chestplate|*boots|*tunic|*pants|*cap]>:
                 - if <[item]> matches iron_* && <[hLevel]> < 1:
                     - determine cancelled
@@ -97,6 +101,7 @@ lightarmor:
                     - determine cancelled
 
 armorLevelKey:
+    # level key for armor
     type: data
     leather: 1
     iron: 10

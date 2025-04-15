@@ -48,7 +48,7 @@ axes_xp:
             - define totalDamage:<[damage].add[<[bonusDamage]>]>
             - determine <[totalDamage]>
 
-        # level checker function (make sure player can equip the item
+        # these calls ensure that a player has the appropriate level to equip an axe. See key at bottom for level requirements
         on player scrolls their hotbar item:*_axe:
             - if <player.inventory.slot[<context.new_slot>].has_display>:
                 - if <player.flag[skillAxe].get[1]> < <script[axeMaterial].data_key[<player.inventory.slot[<context.new_slot>].script.name>]>:
@@ -132,9 +132,10 @@ axeEquipCheck:
 # material reference for level requirements
 axeMaterial:
     type: data
+    # items are set to 1 for now for testing
     stone_axe: 1
     sharpened_stone_axe: 1
     iron_axe: 1
-    superior_iron_axe: 30
+    superior_iron_axe: 1
     diamond_axe: 1
 
