@@ -35,8 +35,8 @@ lightarmor:
             - else if <player.has_flag[heavyOn]>:
                 - define skill <player.flag[skillHeavyArmor]>
                 - run xpBar def.skill:<[skill]>
-        on player clicks in inventory:
-            - narrate <context.click>
+        on player clicks in player:
+            - narrate <context.inventory>
             - define heavyArmor <list[netherite_*|iron_*|golden_*|diamond_*]>
             - define armorSlot <list[37|38|39|40]>
             - define hLevel <player.flag[skillHeavyArmor].get[1]>
