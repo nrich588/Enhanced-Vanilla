@@ -18,3 +18,6 @@ crude_bow:
 
 # swords
 
+# weapon world scripts
+
+# weapon task/proc scripts

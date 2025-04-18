@@ -24,16 +24,15 @@ sharpened_stone_axe:
     - <&2> 0.85 Attack Speed
     durability: 0
 
-studded_leather_chestplate:
+iron_alloy_ingot:
     type: item
-    material: leather_chestplate
-    mechanisms:
-        attribute_modifiers:
-            attack_damage:
-                1:
-                    operation: add_number
-                    amount: 5
-        hides: attributes
-    display name: <&r><&l>Studded Vest
-    lore:
-    - <&4>Stud
+    material: iron_ingot
+    display name: <&r><&b>Iron Alloy Ingot
+    allow in material recipes: false
+    recipes:
+        1:
+            type: shaped
+            input:
+            - air|material:iron_ingot|air
+            - air|material:copper_ingot|air
+            - air|air|air
