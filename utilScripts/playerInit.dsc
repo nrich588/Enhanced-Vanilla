@@ -6,7 +6,7 @@ playerInit:
             # commented out, want to have players reset levels on join for testing purposes
             #- if !<player.has_flag[joinedBefore]>:
                 # skill levels
-                - flag <player> skillAgility:<list[1|0|500|Agility]>
+                - flag <player> skillAgility:<list[50|0|500|Agility]>
                 - flag <player> skillAlchemy:<list[1|0|500|Alchemy]>
                 - flag <player> skillAnimals:<list[1|0|500|Animals]>
                 - flag <player> skillArcana:<list[1|0|500|Arcana]>
@@ -25,6 +25,28 @@ playerInit:
                 - flag <player> skillToolSmithing:<list[1|0|500|Tool Smithing]>
                 - flag <player> skillWeaponSmithing:<list[1|0|500|Weapon Smithing]>
 
+                - flag <player> runCounter:0
+
+                # xp displays
+                - flag <player> showXp
+                #- flag <player> showXpAgility
+                - flag <player> showXpAlchemy
+                - flag <player> showXpAnimals
+                - flag <player> showXpArcana
+                - flag <player> showXpArchery
+                - flag <player> showXpArmorSmithing
+                - flag <player> showXpAxe
+                - flag <player> showXpCrafting
+                - flag <player> showXpFarming
+                - flag <player> showXpFishing
+                - flag <player> showXpExcavation
+                - flag <player> showXpHeavyArmor
+                - flag <player> showXpHeavyWeapons
+                - flag <player> showXpLightArmor
+                - flag <player> showXpMining
+                - flag <player> showXpSword
+                - flag <player> showXpToolSmithing
+                - flag <player> showXpWeaponSmithing
                 - narrate "Welcome newcomer!"
                 - flag <player> joinedBefore
             #- else:

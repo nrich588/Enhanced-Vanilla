@@ -4,7 +4,7 @@ lightarmor:
         on player damaged by entity:
             - define damage <context.final_damage>
             - if <context.entity.has_flag[blunted]>:
-                - narrate targets:<player> "They are blunted!"
+                #- narrate targets:<player> "They are blunted!"
                 - define damage <[damage].div[2].round_up>
             - define playerGear:<player.equipment>
             - flag player heavyOn:!
@@ -31,7 +31,7 @@ lightarmor:
                 - foreach <[playerGear]> as:item:
                     - if <[item].material.name> matches chainmail_*:
                         - define dodgeChance <[dodgeChance].sub[5]>
-                        - narrate "Since you have chainmail on, you dodge worse! Your dodge chance is now <[dodgeChance]>%!"
+                        #- narrate "Since you have chainmail on, you dodge worse! Your dodge chance is now <[dodgeChance]>%!"
                         - foreach stop
                 - if <util.random_chance[<[dodgeChance]>]>:
                     - playsound <player> sound:ENTITY_LLAMA_SPIT volume:0.1
@@ -60,7 +60,7 @@ lightarmor:
                 - define skill <player.flag[skillHeavyArmor]>
                 - run xpBar def.skill:<[skill]>
         on player clicks in player:
-            - narrate <context.inventory>
+            #- narrate <context.inventory>
             - define heavyArmor <list[netherite_*|iron_*|golden_*|diamond_*]>
             - define armorSlot <list[37|38|39|40]>
             - define hLevel <player.flag[skillHeavyArmor].get[1]>

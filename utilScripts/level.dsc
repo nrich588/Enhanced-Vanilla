@@ -125,8 +125,12 @@ xpBar:
     type: task
     definitions: skill
     script:
-        - flag <player> xpBarTimer expire:5s
-        - bossbar auto <player.uuid><[skill].get[4]>XpBar color:Blue "title:<[skill].get[4]> XP: <yellow><[skill].get[2]> <white>/ <yellow><[skill].get[3]> " progress:<[skill].get[2].div[<[skill].get[3]>]> players:<player> style:segmented_10
-        - wait 5.1s
-        - if !<player.has_flag[xpBarTimer]>:
-            - bossbar remove <player.uuid><[skill].get[4]>XpBar
+        #- define xpBarCount  && <[xpBarCount]> < 2
+        - if <player.has_flag[showXp]>:
+           # - flag <player> xpBarCount:++
+            - flag <player> xpBarTimer<[skill].get[4]> expire:5s
+            - bossbar auto <player.uuid><[skill].get[4]>XpBar color:Blue "title:<[skill].get[4]> XP: <yellow><[skill].get[2]> <white>/ <yellow><[skill].get[3]> " progress:<[skill].get[2].div[<[skill].get[3]>]> players:<player> style:segmented_10
+            - wait 5.1s
+            - if !<player.has_flag[xpBarTimer<[skill].get[4]>]>:
+                - bossbar remove <player.uuid><[skill].get[4]>XpBar
+                #- flag <player> xpBarCount:--

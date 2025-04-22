@@ -89,17 +89,17 @@ combatEvents:
             - if <player.item_in_hand.material.name> matches *_sword:
                 - define skill <player.flag[skillSword]>
                 - run skillChecker def.xp:<[xp]> def.skill:<[skill]> def.skillFlag:skillSword
-            - narrate <player.equipment.formatted>
+            #- narrate <player.equipment.formatted>
             # grants xp for heavy armor
             - if <player.equipment.contains_match[iron_*|netherite_*|golden_*|diamond_*]>:
                 - define skill <player.flag[skillHeavyArmor]>
                 - run skillChecker def.xp:<[xp].div[3].round_up> def.skill:<[skill]> def.skillFlag:skillHeavyArmor
-                - narrate "Giving <[xp].div[3].round_up>!"
+                #- narrate "Giving <[xp].div[3].round_up>!"
             # grants xp for light armor
             - if <player.equipment.contains_match[chainmail_*|leather_*]>:
                 - define skill <player.flag[skillLightArmor]>
                 - run skillChecker def.xp:<[xp].div[3].round_up> def.skill:<[skill]> def.skillFlag:skillLightArmor
-                - narrate "Giving <[xp].div[3].round_up>!"
+                #- narrate "Giving <[xp].div[3].round_up>!"
         after player kills entity:
             # creates / updates xp bar for each skill that is proc'd.
             - if <player.item_in_hand.material.name> matches *_sword:

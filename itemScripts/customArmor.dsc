@@ -10,7 +10,7 @@ leather_chest:
             MOVEMENT_SPEED:
                 1:
                     operation: MULTIPLY_SCALAR_1
-                    amount: 0.01
+                    amount: 0.02
             ARMOR:
                 1:
                     operation: add_number
@@ -26,7 +26,7 @@ leather_chest:
             - leather|leather|leather
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 1
+    - <&r><&3><&chr[2B06]>  Level 1
 leather_legs:
     type: item
     material: leather_leggings
@@ -35,7 +35,7 @@ leather_legs:
             MOVEMENT_SPEED:
                 1:
                     operation: MULTIPLY_SCALAR_1
-                    amount: 0.01
+                    amount: 0.02
             ARMOR:
                 1:
                     operation: add_number
@@ -51,7 +51,7 @@ leather_legs:
             - leather|air|leather
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 1
+    - <&r><&3><&chr[2B06]>  Level 1
 leather_hat:
     type: item
     material: leather_helmet
@@ -60,7 +60,7 @@ leather_hat:
             MOVEMENT_SPEED:
                 1:
                     operation: MULTIPLY_SCALAR_1
-                    amount: 0.01
+                    amount: 0.02
             ARMOR:
                 1:
                     operation: add_number
@@ -76,7 +76,7 @@ leather_hat:
             - air|air|air
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 1
+    - <&r><&3><&chr[2B06]>  Level 1
 leather_shoes:
     type: item
     material: leather_boots
@@ -85,7 +85,7 @@ leather_shoes:
             MOVEMENT_SPEED:
                 1:
                     operation: MULTIPLY_SCALAR_1
-                    amount: 0.01
+                    amount: 0.02
             ARMOR:
                 1:
                     operation: add_number
@@ -101,7 +101,7 @@ leather_shoes:
             - air|air|air
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 1
+    - <&r><&3><&chr[2B06]>  Level 1
 studded_leather_tunic:
     type: item
     material: leather_chestplate
@@ -111,7 +111,7 @@ studded_leather_tunic:
             MOVEMENT_SPEED:
                 1:
                     operation: MULTIPLY_SCALAR_1
-                    amount: 0.01
+                    amount: 0.02
             ARMOR:
                 1:
                     operation: add_number
@@ -120,7 +120,7 @@ studded_leather_tunic:
     display name: <&r>Studded Vest
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 15
+    - <&r><&3><&chr[2B06]>  Level 15
     recipes:
         1:
             type: shaped
@@ -138,7 +138,7 @@ studded_leather_pants:
             MOVEMENT_SPEED:
                 1:
                     operation: MULTIPLY_SCALAR_1
-                    amount: 0.01
+                    amount: 0.02
             ARMOR:
                 1:
                     operation: add_number
@@ -147,7 +147,7 @@ studded_leather_pants:
     display name: <&r>Studded Chaps
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 15
+    - <&r><&3><&chr[2B06]>  Level 15
     recipes:
         1:
             type: shaped
@@ -165,7 +165,7 @@ heavy_leather_boots:
             MOVEMENT_SPEED:
                 1:
                     operation: MULTIPLY_SCALAR_1
-                    amount: 0.01
+                    amount: 0.02
             ARMOR:
                 1:
                     operation: add_number
@@ -174,7 +174,7 @@ heavy_leather_boots:
     display name: <&r>Thick Leather Boots
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 15
+    - <&r><&3><&chr[2B06]>  Level 15
     recipes:
         1:
             type: shaped
@@ -191,7 +191,7 @@ reinforced_leather_cap:
             MOVEMENT_SPEED:
                 1:
                     operation: MULTIPLY_SCALAR_1
-                    amount: 0.01
+                    amount: 0.02
             ARMOR:
                 1:
                     operation: add_number
@@ -200,7 +200,7 @@ reinforced_leather_cap:
     display name: <&r>Studded Coif
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 15
+    - <&r><&3><&chr[2B06]>  Level 15
     recipes:
         1:
             type: shaped
@@ -219,6 +219,10 @@ chainmail_body:
                 1:
                     operation: add_number
                     amount: 5
+            MOVEMENT_SPEED:
+                1:
+                    operation: MULTIPLY_SCALAR_1
+                    amount: 0.01
     display name: <&r><&f>Chainbody
     recipes:
         1:
@@ -229,7 +233,7 @@ chainmail_body:
             - iron_nugget|iron_nugget|iron_nugget
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 10
+    - <&r><&3><&chr[2B06]>  Level 10
 chainmail_legs:
     type: item
     material: chainmail_leggings
@@ -239,6 +243,10 @@ chainmail_legs:
                 1:
                     operation: add_number
                     amount: 4
+            MOVEMENT_SPEED:
+                1:
+                    operation: MULTIPLY_SCALAR_1
+                    amount: 0.01
     display name: <&r><&f>Chainlegs
     recipes:
         1:
@@ -249,7 +257,7 @@ chainmail_legs:
             - iron_nugget|air|iron_nugget
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 10
+    - <&r><&3><&chr[2B06]>  Level 10
 
 
 chainmail_helm:
@@ -261,6 +269,10 @@ chainmail_helm:
                 1:
                     operation: add_number
                     amount: 2
+            MOVEMENT_SPEED:
+                1:
+                    operation: MULTIPLY_SCALAR_1
+                    amount: 0.01
     display name: <&r><&f>Chainmail Coif
     recipes:
         1:
@@ -281,6 +293,10 @@ chainboots:
                 1:
                     operation: add_number
                     amount: 1
+            MOVEMENT_SPEED:
+                1:
+                    operation: MULTIPLY_SCALAR_1
+                    amount: 0.01
     display name: <&r><&f>Chainboots
     recipes:
         1:
@@ -291,7 +307,7 @@ chainboots:
             - air|air|air
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 10
+    - <&r><&3><&chr[2B06]>  Level 10
 
 
 superior_chainmail_body:
@@ -303,6 +319,10 @@ superior_chainmail_body:
                 1:
                     operation: add_number
                     amount: 6
+            MOVEMENT_SPEED:
+                1:
+                    operation: MULTIPLY_SCALAR_1
+                    amount: 0.01
     display name: <&r><&f>Superior Chainbody
     recipes:
         1:
@@ -323,6 +343,10 @@ superior_chainmail_leggings:
                 1:
                     operation: add_number
                     amount: 5
+            MOVEMENT_SPEED:
+                1:
+                    operation: MULTIPLY_SCALAR_1
+                    amount: 0.01
     display name: <&r><&f>Superior Chainlegs
     recipes:
         1:
@@ -333,7 +357,7 @@ superior_chainmail_leggings:
             - iron_nugget|air|iron_nugget
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 25
+    - <&r><&3><&chr[2B06]>  Level 25
 
 superior_chainmail_helm:
     type: item
@@ -344,6 +368,10 @@ superior_chainmail_helm:
                 1:
                     operation: add_number
                     amount: 2.5
+            MOVEMENT_SPEED:
+                1:
+                    operation: MULTIPLY_SCALAR_1
+                    amount: 0.01
     display name: <&r><&f>Superior Chainmail Coif
     recipes:
         1:
@@ -354,7 +382,7 @@ superior_chainmail_helm:
             - air|air|air
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 25
+    - <&r><&3><&chr[2B06]>  Level 25
 superior_chainmail_boots:
     type: item
     material: chainmail_boots
@@ -364,6 +392,10 @@ superior_chainmail_boots:
                 1:
                     operation: add_number
                     amount: 1.5
+            MOVEMENT_SPEED:
+                1:
+                    operation: MULTIPLY_SCALAR_1
+                    amount: 0.01
     display name: <&r><&f>Superior Chainboots
     recipes:
         1:
@@ -374,7 +406,7 @@ superior_chainmail_boots:
             - air|air|air
     lore:
     - <&r><&4><&chr[26E8]> Light Armor
-    - <&r><&3><&chr[2B06]> Level 25
+    - <&r><&3><&chr[2B06]>  Level 25
 # iron
 
 iron_body:
@@ -396,7 +428,7 @@ iron_body:
             - iron_ingot|iron_ingot|iron_ingot
     lore:
     - <&r><&4><&chr[26E8]> Heavy Armor
-    - <&r><&3><&chr[2B06]> Level 1
+    - <&r><&3><&chr[2B06]>  Level 1
 iron_legs:
     type: item
     material: iron_leggings
@@ -416,7 +448,7 @@ iron_legs:
             - iron_ingot|air|iron_ingot
     lore:
     - <&r><&4><&chr[26E8]> Heavy Armor
-    - <&r><&3><&chr[2B06]> Level 1
+    - <&r><&3><&chr[2B06]>  Level 1
 iron_helm:
     type: item
     material: iron_helmet
@@ -436,7 +468,7 @@ iron_helm:
             - air|air|air
     lore:
     - <&r><&4><&chr[26E8]> Heavy Armor
-    - <&r><&3><&chr[2B06]> Level 1
+    - <&r><&3><&chr[2B06]>  Level 1
 iron_greaves:
     type: item
     material: iron_boots
@@ -456,8 +488,8 @@ iron_greaves:
             - iron_ingot|air|iron_ingot
             - air|air|air
     lore:
-    - <&r><&4>Heavy Armor
-    - <&r><&3><&chr[2B06]> Level 1
+    - <&r><&4><&chr[26E8]> Heavy Armor
+    - <&r><&3><&chr[2B06]>  Level 1
 
 reinforced_iron_body:
     type: item
@@ -478,7 +510,7 @@ reinforced_iron_body:
             - iron_ingot|iron_ingot|iron_ingot
     lore:
     - <&r><&4><&chr[26E8]> Heavy Armor
-    - <&r><&3><&chr[2B06]> Level 10
+    - <&r><&3><&chr[2B06]>  Level 10
 reinforced_iron_legs:
     type: item
     material: iron_leggings
@@ -498,7 +530,7 @@ reinforced_iron_legs:
             - iron_alloy_ingot|air|iron_alloy_ingot
     lore:
     - <&r><&4><&chr[26E8]> Heavy Armor
-    - <&r><&3><&chr[2B06]> Level 10
+    - <&r><&3><&chr[2B06]>  Level 10
 reinforced_iron_helm:
     type: item
     material: iron_helmet
@@ -518,7 +550,7 @@ reinforced_iron_helm:
             - air|air|air
     lore:
     - <&r><&4><&chr[26E8]> Heavy Armor
-    - <&r><&3><&chr[2B06]> Level 10
+    - <&r><&3><&chr[2B06]>  Level 10
 reinforced_iron_greaves:
     type: item
     material: iron_boots
@@ -538,7 +570,7 @@ reinforced_iron_greaves:
             - air|air|air
     lore:
     - <&r><&4><&chr[26E8]> Heavy Armor
-    - <&r><&3><&chr[2694]>  Level 10
+    - <&r><&3><&chr[2694]>   Level 10
 # gold
 
 # diamond

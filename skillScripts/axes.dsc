@@ -30,8 +30,8 @@ axes_xp:
                 - else if <[dropChance]> >= 100:
                     - drop <context.drop_entities.parse[item]> <context.location>
                     - narrate "<italic>Due to your skill with an axe, you were able to gain and additional log!"
-            - else:
-                - narrate "PEE"
+            #- else:
+                #- narrate "PEE"
 
         # this applies bonus damage for players based on their axe level
         on entity damaged by player with:*_axe:

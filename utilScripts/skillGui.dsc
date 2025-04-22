@@ -45,8 +45,8 @@ sword_skill:
         hides: attributes
     display name: <&r><&l>SWORDS
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillSword].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillSword].get[2]><&r>/<&e><player.flag[skillSword].get[3]>
 ranged_skill:
     type: item
     material: bow
@@ -54,8 +54,8 @@ ranged_skill:
         hides: attributes
     display name: <&r><&l>ARCHERY
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillArchery].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillArchery].get[2]><&r>/<&e><player.flag[skillArchery].get[3]>
 larmor_skill:
     type: item
     material: leather_chestplate
@@ -68,8 +68,8 @@ larmor_skill:
         hides: attributes
     display name: <&r><&l>LIGHT ARMOR
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillLightArmor].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillLightArmor].get[2]><&r>/<&e><player.flag[skillLightArmor].get[3]>
 harmor_skill:
     type: item
     material: netherite_chestplate
@@ -82,36 +82,36 @@ harmor_skill:
         hides: attributes
     display name: <&r><&l>HEAVY ARMOR
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillHeavyArmor].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillHeavyArmor].get[2]><&r>/<&e><player.flag[skillHeavyArmor].get[3]>
 weapon_smith_skill:
     type: item
     material: anvil
     display name: <&r><&l>WEAPON SMITHING
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillWeaponSmithing].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillWeaponSmithing].get[2]><&r>/<&e><player.flag[skillWeaponSmithing].get[3]>
 armor_smith_skill:
     type: item
     material: iron_ingot
     display name: <&r><&l>ARMOR SMITHING
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillArmorSmithing].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillArmorSmithing].get[2]><&r>/<&e><player.flag[skillArmorSmithing].get[3]>
 tool_smith_skill:
     type: item
     material: grindstone
     display name: <&r><&l>TOOL SMITHING
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillToolSmithing].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillToolSmithing].get[2]><&r>/<&e><player.flag[skillToolSmithing].get[3]>
 craft_skill:
     type: item
     material: leather
     display name: <&r><&l>CRAFTING
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillCrafting].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillCrafting].get[2]><&r>/<&e><player.flag[skillCrafting].get[3]>
 farm_skill:
     type: item
     material: iron_hoe
@@ -124,8 +124,8 @@ farm_skill:
         hides: attributes
     display name: <&r><&l>FARMING
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillFarming].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillFarming].get[2]><&r>/<&e><player.flag[skillFarming].get[3]>
 alch_skill:
     type: item
     material: blaze_powder
@@ -133,8 +133,8 @@ alch_skill:
         hides: attributes
     display name: <&r><&l>ALCHEMY
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillAlchemy].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillAlchemy].get[2]><&r>/<&e><player.flag[skillAlchemy].get[3]>
 arcana_skill:
     type: item
     material: nether_star
@@ -142,8 +142,8 @@ arcana_skill:
         hides: attributes
     display name: <&r><&l><&f><&l>ARCANA
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillArcana].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillArcana].get[2]><&r>/<&e><player.flag[skillArcana].get[3]>
 fish_skill:
     type: item
     material: fishing_rod
@@ -151,8 +151,8 @@ fish_skill:
         hides: attributes
     display name: <&r><&l>FISHING
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillFishing].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillFishing].get[2]><&r>/<&e><player.flag[skillFishing].get[3]>
 agility_skill:
     type: item
     material: leather_boots
@@ -165,8 +165,8 @@ agility_skill:
         hides: attributes
     display name: <&r><&l>AGILITY
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillAgility].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillAgility].get[2]><&r>/<&e><player.flag[skillAgility].get[3]>
 heavywep_skill:
     type: item
     material: mace
@@ -179,8 +179,8 @@ heavywep_skill:
         hides: attributes
     display name: <&r><&l><&f><&l>HEAVY WEAPONS
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillHeavyWeapons].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillHeavyWeapons].get[2]><&r>/<&e><player.flag[skillHeavyWeapons].get[3]>
 animals_skill:
     type: item
     material: egg
@@ -188,8 +188,8 @@ animals_skill:
         hides: attributes
     display name: <&r><&l><&f><&l>ANIMALS
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillAnimals].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillAnimals].get[2]><&r>/<&e><player.flag[skillAnimals].get[3]>
 excavation_skill:
     type: item
     material: iron_shovel
@@ -202,8 +202,8 @@ excavation_skill:
         hides: attributes
     display name: <&r><&l><&f><&l>EXCAVATION
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillExcavation].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillExcavation].get[2]><&r>/<&e><player.flag[skillExcavation].get[3]>
 mining_skill:
     type: item
     material: diamond_pickaxe
@@ -216,8 +216,8 @@ mining_skill:
         hides: attributes
     display name: <&r><&l><&f><&l>MINING
     lore:
-    - <&r>Current Level: <&4><player.flag[skillAxe].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillAxe].get[2]><&r>/<&e><player.flag[skillAxe].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillMining].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillMining].get[2]><&r>/<&e><player.flag[skillMining].get[3]>
 axe_guide:
     type: book
     title: AXES
@@ -235,10 +235,11 @@ skill_gui_events:
         on player clicks axe_skill in skillGui:
             - adjust <player> show_book:<item[axe_guide]>
             - playsound <player> sound:BLOCK_ANVIL_USE
+        on player clicks close_menu in skillGui:
+            - inventory close
 
 
-
-check_time:
+skillMenuCommand:
     type: command
     name: skills
     description: Allows you to check a players time in game.
