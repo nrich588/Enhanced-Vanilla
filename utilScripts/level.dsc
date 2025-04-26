@@ -84,7 +84,7 @@ levelCheck:
     definitions: xpGiven
     script:
         - define A:500
-        - define B:1.4
+        - define B:1.2
         - define N:<player.flag[playerLevel]>
         # determines how much xp is needed to advance to the next level, assumes
         - define xpNeeded:<[A].mul[<[N].power[<[B]>]>].round>
@@ -103,8 +103,8 @@ skillChecker:
     type: task
     definitions: xp|skill|skillFlag
     script:
-        - define A:500
-        - define B:1.4
+        - define A:100
+        - define B:1.3
         - define N:<[skill].get[1]>
         - define xpNeeded:<[A].mul[<[N].power[<[B]>]>].round>
         - define newXp:<[skill].get[2].add[<[xp]>]>

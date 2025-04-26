@@ -9,8 +9,12 @@ skillGui:
     - [null_zone] [agility_skill] [alch_skill] [animals_skill] [arcana_skill] [ranged_skill] [armor_smith_skill] [axe_skill] [null_zone]
     - [null_zone] [craft_skill] [excavation_skill] [farm_skill] [fish_skill] [harmor_skill] [heavywep_skill] [larmor_skill] [null_zone]
     - [null_zone] [mining_skill] [sword_skill] [tool_smith_skill] [weapon_smith_skill] [] [] [] [null_zone]
-    - [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [close_menu] [null_zone]
+    - [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [back_button] [close_menu] [null_zone]
 
+back_button:
+    type: item
+    material: black_candle
+    display name: <&4>BACK
 close_menu:
     type: item
     material: barrier
@@ -179,8 +183,8 @@ heavywep_skill:
         hides: attributes
     display name: <&r><&l><&f><&l>HEAVY WEAPONS
     lore:
-    - <&r>Current Level: <&4><player.flag[skillHeavyWeapons].get[1]>
-    - <&r>Current XP: <&e><player.flag[skillHeavyWeapons].get[2]><&r>/<&e><player.flag[skillHeavyWeapons].get[3]>
+    - <&r>Current Level: <&4><player.flag[skillHeavyWeapon].get[1]>
+    - <&r>Current XP: <&e><player.flag[skillHeavyWeapon].get[2]><&r>/<&e><player.flag[skillHeavyWeapon].get[3]>
 animals_skill:
     type: item
     material: egg
@@ -237,6 +241,8 @@ skill_gui_events:
             - playsound <player> sound:BLOCK_ANVIL_USE
         on player clicks close_menu in skillGui:
             - inventory close
+        on player clicks back_button in inventory:
+            - inventory destination:menuGui open
 
 
 skillMenuCommand:

@@ -16,5 +16,3 @@ swords:
             - define totalDamage:<[damage].add[<[bonusDamage]>]>
             - determine <[totalDamage]>
         # checks level of player to make sure they use the sword
-
-        

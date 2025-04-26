@@ -9,9 +9,9 @@ agilityEvents:
             - flag <player> stopSprint:<player.location>
             - flag <player> runCounter:+:<player.flag[startSprint].distance[<player.flag[stopSprint]>].round>
             - define xp 0
-            - while <player.flag[runCounter]> >= 25:
+            - while <player.flag[runCounter]> >= 5:
                 - define xp:+:1
-                - flag <player> runCounter:-:25
+                - flag <player> runCounter:-:5
             - run skillChecker def.xp:<[xp]> def.skill:<[skill]> def.skillFlag:skillAgility
         after player stops sprinting:
             - if <player.has_flag[showXpAgility]>:

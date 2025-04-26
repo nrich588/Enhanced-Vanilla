@@ -60,7 +60,8 @@ combatEvents:
     type: world
     events:
 
-
+        on player damages entity:
+            - narrate <context.final_damage>/<context.entity.health>
         on player kills entity:
             # sets xp value of kill
             - define xp:<script[combatXp].data_key[<context.entity.name>]>
@@ -89,7 +90,7 @@ combatEvents:
             - if <player.item_in_hand.material.name> matches *_sword:
                 - define skill <player.flag[skillSword]>
                 - run skillChecker def.xp:<[xp]> def.skill:<[skill]> def.skillFlag:skillSword
-            #- narrate <player.equipment.formatted>
+
             # grants xp for heavy armor
             - if <player.equipment.contains_match[iron_*|netherite_*|golden_*|diamond_*]>:
                 - define skill <player.flag[skillHeavyArmor]>
@@ -108,12 +109,10 @@ combatEvents:
             - if <player.item_in_hand.material.name> matches *_axe:
                 - define skill <player.flag[skillAxe]>
                 - run xpBar def.skill:<[skill]>
-            - if <player.equipment.contains_match[iron_*|netherite_*|golden_*|diamond_*]>:
+            - if <player.equipment.contains_match[iron_*|netherite_*|golden_*|diamond_*]> && <player.has_flag[showXpHeavyArmor]>:
                 - define skill <player.flag[skillHeavyArmor]>
                 - run xpBar def.skill:<[skill]>
-            - if <player.equipment.contains_match[chainmail_*|leather_*]>:
+            - if <player.equipment.contains_match[chainmail_*|leather_*]> && <player.has_flag[showXpLightArmor]>:
                 - define skill <player.flag[skillLightArmor]>
                 - run xpBar def.skill:<[skill]>
         # archery testing
-        on player shoots bow:
-            - narrate <context.projectile.shooter>

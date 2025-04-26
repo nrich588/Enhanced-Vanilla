@@ -106,8 +106,8 @@ notificationMenuGui:
 
     - [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone]
     - [null_zone] [globalNotifIcon] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone]
-    - [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone]
-    - [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [close_menu] [null_zone]
+    - [null_zone] [agilityNotification] [armorNotification] [combatNotification] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone]
+    - [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [null_zone] [back_button] [close_menu] [null_zone]
 globalNotifIcon:
     type: item
     material: bell
@@ -121,6 +121,47 @@ globalNotifIcon:
     display name: <&r><&l>ALL
     lore:
     - <&r>SHOW XP BARS: <&e><player.has_flag[showXp]>
+
+agilityNotification:
+    type: item
+    material: leather_boots
+    mechanisms:
+        attribute_modifiers:
+            attack_damage:
+                1:
+                    operation: add_number
+                    amount: 5
+        hides: attributes
+    display name: <&r><&l>AGILITY
+    lore:
+    - <&r>SHOW XP BARS: <&e><player.has_flag[showXpAgility]>
+
+armorNotification:
+    type: item
+    material: iron_chestplate
+    mechanisms:
+        attribute_modifiers:
+            attack_damage:
+                1:
+                    operation: add_number
+                    amount: 5
+        hides: attributes
+    display name: <&r><&l>ARMOR
+    lore:
+    - <&r>SHOW XP BARS: <&e><player.has_flag[showXpHeavyArmor]>
+combatNotification:
+    type: item
+    material: iron_sword
+    mechanisms:
+        attribute_modifiers:
+            attack_damage:
+                1:
+                    operation: add_number
+                    amount: 5
+        hides: attributes
+    display name: <&r><&l>COMBAT
+    lore:
+    - <&r>SHOW XP BARS: <&e><player.has_flag[showXpSword]>
 notificationMenuEvents:
     type: world
     events:
@@ -130,4 +171,33 @@ notificationMenuEvents:
                 - inventory open d:notificationMenuGui
             - else:
                 - flag <player> showXp
+                - inventory open d:notificationMenuGui
+        on player clicks agilityNotification in inventory:
+            - if <player.has_flag[showXpAgility]>:
+                - flag <player> showXpAgility:!
+                - inventory open d:notificationMenuGui
+            - else:
+                - flag <player> showXpAgility
+                - inventory open d:notificationMenuGui
+        on player clicks armorNotification in inventory:
+            - if <player.has_flag[showXpHeavyArmor]>:
+                - flag <player> showXpHeavyArmor:!
+                - flag <player> showXpLightArmor:!
+                - inventory open d:notificationMenuGui
+            - else:
+                - flag <player> showXpHeavyArmor
+                - flag <player> showXpLightArmor
+                - inventory open d:notificationMenuGui
+        on player clicks combatNotification in inventory:
+            - if <player.has_flag[showXpSword]>:
+                - flag <player> showXpSword:!
+                - flag <player> showXpAxe:!
+                - flag <player> showXpArchery:!
+                - flag <player> showXpHeavyWeapon:!
+                - inventory open d:notificationMenuGui
+            - else:
+                - flag <player> showXpSword
+                - flag <player> showXpAxe
+                - flag <player> showXpArchery
+                - flag <player> showXpHeavyWeapon
                 - inventory open d:notificationMenuGui

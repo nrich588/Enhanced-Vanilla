@@ -53,10 +53,10 @@ lightarmor:
             # displays the appropriate xp bar, can't earn armor xp from taking damaged with mixed armor classes
             - if <player.has_flag[lightOn]> && <player.has_flag[heavyOn]>:
                 - determine passively
-            - else if <player.has_flag[lightOn]>:
+            - else if <player.has_flag[lightOn]> && <player.has_flag[showXpLightArmor]>:
                 - define skill <player.flag[skillLightArmor]>
                 - run xpBar def.skill:<[skill]>
-            - else if <player.has_flag[heavyOn]>:
+            - else if <player.has_flag[heavyOn]> && <player.has_flag[showXpHeavyArmor]>:
                 - define skill <player.flag[skillHeavyArmor]>
                 - run xpBar def.skill:<[skill]>
         on player clicks in player:
